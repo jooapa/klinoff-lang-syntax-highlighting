@@ -1,0 +1,25 @@
+{
+  "name": "klinoff-lang-syntax-higlighting",
+  "displayName": "klinoff-lang Syntax Higlighting",
+  "description": "Have you wanted to write klinoff-lang in peace and fast, well look no further, a groundbreaking techology of syntax higlighting from klinoff-alng",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "kln",
+      "aliases": ["klinoff-lang", "kln"],
+      "extensions": [".kln",".nöff"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "kln",
+      "scopeName": "source.kln",
+      "path": "./syntaxes/klinoff-lang.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "scopeName": "source.kln",
+  "fileTypes": ["kln", "nöff"],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.kln",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.kln",
+          "match": "\\b(nöff|nöf|oink|niff|nilf|nör|når|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.kln",
+          "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.arithmetic.kln",
+          "match": "[+\\-*/%^]"
+        },
+        {
+          "name": "keyword.operator.comparison.kln",
+          "match": "==|!=|>|<|>=|<="
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "name": "entity.name.function.kln",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+          "captures": {
+            "0": {
+              "name": "entity.name.function.kln"
+            }
+          }
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.kln",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.kln",
+          "begin": "\"",
+          "end": "\"",
+          "captures": {
+            "0": {
+              "name": "string.quoted.double.kln"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
