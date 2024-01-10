@@ -2,7 +2,7 @@
   "name": "klinoff-lang-syntax-highlighting",
   "displayName": "klinoff-lang Syntax Highlighting",
   "description": "Have you wanted to write klinoff-lang in peace and fast, well look no further, a groundbreaking technology of syntax highlighting from klinoff-lang",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "Jooapa",
   "icon": "images/logo.png",
   "repository": {
@@ -22,14 +22,20 @@
       "extensions": [".kln", ".nöff"],
       "configuration": "./language-configuration.json"
     }],
+    "files.associations": {
+      "*.nöff": "jooapa.klinoff-lang-syntax-highlighting",
+      "*.kln": "jooapa.klinoff-lang-syntax-highlighting"
+    },
+    "iconThemes": [
+      {
+        "id": "jooapa.klinoff-lang-syntax-highlighting",
+        "path": "./icons"
+      }
+    ],
     "grammars": [{
       "language": "kln",
       "scopeName": "source.kln",
       "path": "./syntaxes/klinoff-lang.tmLanguage.json"
     }]
-  },
-  "fileAssociations": {
-    "*.kln": "images/icon.png",
-    "*.nöff": "images/icon.png"
   }
 }
