@@ -1,8 +1,12 @@
 {
   "name": "klinoff-lang-syntax-higlighting",
   "displayName": "klinoff-lang Syntax Higlighting",
-  "description": "Have you wanted to write klinoff-lang in peace and fast, well look no further, a groundbreaking techology of syntax higlighting from klinoff-alng",
+  "description": "Have you wanted to write klinoff-lang in peace and fast, well look no further, a groundbreaking techology of syntax higlighting from klinoff-lang",
   "version": "0.0.1",
+  "publisher": "Jooapa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jooapa/klinoff-lang-syntax-higlighting"},
   "engines": {
     "vscode": "^1.85.0"
   },
