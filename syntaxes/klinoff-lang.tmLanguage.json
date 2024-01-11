@@ -37,7 +37,7 @@
       "patterns": [
         {
           "name": "keyword.control.kln",
-          "match": "\\b(nöff|nöf|oink|niff|nilf|nör|når|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power)\\b"
+          "match": "\\b(nöff|nöf|oink|niff|nilf|nör|når|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff)\\b"
         }
       ]
     },
