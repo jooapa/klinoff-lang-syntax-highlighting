@@ -17,14 +17,6 @@
     },
     {
         "scope": "source.kln",
-        "prefix": "modify",
-        "body": [
-            "modify $1 $2"
-        ],
-        "description": "Modify a variable in klinoff-lang"
-    },
-    {
-        "scope": "source.kln",
         "prefix": "oink",
         "body": [
             "oink \"$1\""

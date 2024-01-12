@@ -111,6 +111,62 @@
           }
         }
       ]
+    },
+    "control-flow": {
+      "patterns": [
+        {
+          "name": "keyword.control.kln",
+          "match": "\\b(niff|nilf)\\b"
+        }
+      ]
+    },
+    "loops": {
+      "patterns": [
+        {
+          "name": "keyword.control.kln",
+          "match": "\\b(snort|pork|pop)\\b"
+        }
+      ]
+    },
+    "input": {
+      "patterns": [
+        {
+          "name": "keyword.control.kln",
+          "match": "\\binput\\b"
+        }
+      ]
+    },
+    "data-types": {
+      "patterns": [
+        {
+          "name": "keyword.control.kln",
+          "match": "\\bstring\\b"
+        }
+      ]
+    },
+    "secret-functions": {
+      "patterns": [
+        {
+          "name": "keyword.control.kln",
+          "match": "\\bnöffnöff\\b"
+        }
+      ]
+    },
+    "all-keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.kln",
+          "match": "\\b(==|!=|>|<|>=|<=|nöff|nöf|oink|niff|nilf|snort|pork|pop|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff)\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.control.kln"
+            },
+            "1": {
+              "include": "#strings"
+            }
+          }
+        }
+      ]
     }
   }
 }
