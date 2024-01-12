@@ -111,6 +111,12 @@
           "name": "string.quoted.double.kln",
           "begin": "\"",
           "end": "\"",
+          "patterns": [
+            {
+              "name": "variable.interpolation.kln",
+              "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*§"
+            }
+          ],
           "captures": {
             "0": {
               "name": "string.quoted.double.kln"

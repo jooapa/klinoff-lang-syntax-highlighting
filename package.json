@@ -2,7 +2,7 @@
   "name": "klinoff-lang-syntax-highlighting",
   "displayName": "klinoff-lang Syntax Highlighting",
   "description": "Have you wanted to write klinoff-lang in peace and fast, well look no further, a groundbreaking technology of syntax highlighting from klinoff-lang",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "Jooapa",
   "icon": "images/logo.png",
   "repository": {
@@ -12,16 +12,16 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": [
-    "Programming Languages"
-  ],
+  "categories": ["Programming Languages"],
   "contributes": {
-    "languages": [{
-      "id": "kln",
-      "aliases": ["klinoff-lang", "kln"],
-      "extensions": [".kln", ".nöff"],
-      "configuration": "./language-configuration.json"
-    }],
+    "languages": [
+      {
+        "id": "kln",
+        "aliases": ["klinoff-lang", "kln"],
+        "extensions": [".kln", ".nöff"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
     "files.associations": {
       "*.nöff": "jooapa.klinoff-lang-syntax-highlighting",
       "*.kln": "jooapa.klinoff-lang-syntax-highlighting"
@@ -32,10 +32,18 @@
         "path": "./icons"
       }
     ],
-    "grammars": [{
-      "language": "kln",
-      "scopeName": "source.kln",
-      "path": "./syntaxes/klinoff-lang.tmLanguage.json"
-    }]
+    "grammars": [
+      {
+        "language": "kln",
+        "scopeName": "source.kln",
+        "path": "./syntaxes/klinoff-lang.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "kln",
+        "path": "./snippets/klinoff-lang-snippets.json"
+      }
+    ]
   }
 }
