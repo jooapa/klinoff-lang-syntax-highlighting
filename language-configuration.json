@@ -1,23 +1,134 @@
+// language-configuration.json
 {
-  "comments": {
-    "lineComment": "//"
-  },
-  "brackets": [
-    ["{", "}"],
-    ["[", "]"],
-    ["(", ")"]
-  ],
-  "autoClosingPairs": [
-    {"open": "{", "close": "}"},
-    {"open": "[", "close": "]"},
-    {"open": "(", "close": ")"},
-    {"open": "\"", "close": "\"", "notIn": ["string"]}
-  ],
-  "surroundingPairs": [
-    {"open": "{", "close": "}"},
-    {"open": "[", "close": "]"},
-    {"open": "(", "close": ")"},
-    {"open": "\"", "close": "\""}
-  ],
-  "wordPattern": "\\$[a-zA-Z_][a-zA-Z0-9_]*"
+  "scopeName": "source.kln",
+  "language": {
+    "tokenPatterns": {
+      // Define token patterns for syntax highlighting
+    },
+    "snippets": {
+      "Starting a Klinoff Program": {
+        "prefix": "nöff",
+        "body": ["nöff ${1:program_name}"],
+        "description": "Starting a Klinoff program"
+      },
+      "Creating Variables": {
+        "prefix": "nöf",
+        "body": ["nöf ${1:variable} = ${2:value}"],
+        "description": "Creating a variable"
+      },
+      "Modifying Variables": {
+        "prefix": "modify",
+        "body": ["modify $${1:variable1} $${2:variable2}"],
+        "description": "Modifying variables"
+      },
+      "Arithmetic Operations": {
+        "prefix": ["add", "sub", "multiply", "divide", "modulo", "power"],
+        "body": ["${1:operation} $$${2:variable1} ${3:value}", "// ${1:operation} $$${2:variable1} ${3:value}"],
+        "description": "Arithmetic operations"
+      },
+      "Comments": {
+        "prefix": "//",
+        "body": ["// ${1:Comment text}"],
+        "description": "Creating a comment"
+      },
+      "Printing": {
+        "prefix": "oink",
+        "body": ["oink ${1:\"Hello World!\"}"],
+        "description": "Printing to console"
+      },
+      "Creating a Pig (Function)": {
+        "prefix": ["pig", "gip"],
+        "body": [
+          "pig ${1:function_name}",
+          "\toink \"Hello World!\"",
+          "gip"
+        ],
+        "description": "Creating a function"
+      },
+      "Slingshot (Jump to Line)": {
+        "prefix": "slingshot",
+        "body": ["slingshot ${1:target_line_or_function_name}"],
+        "description": "Jump to line or function"
+      },
+      "If Statements": {
+        "prefix": ["niff", "nilf"],
+        "body": [
+          "niff $$${1:variable1} ${2:operator} $$${3:variable2} : slingshot ${4:target_line_or_function_name}",
+          "nilf $$${1:variable1} ${2:operator} $$${3:variable2} : slingshot ${4:target_line_or_function_name}"
+        ],
+        "description": "If statements"
+      },
+      "For Loops": {
+        "prefix": ["snort", "pork", "pop"],
+        "body": [
+          "snort ${1:function_name} $$${2:variable} ${3:loop_count_or_infinite}",
+          "\toink \"oinking ${2:variable} times\"",
+          "pork",
+          "snort ${1:function_name} infinite",
+          "\toink \"oinking infinite times\"",
+          "pork",
+          "pop"
+        ],
+        "description": "For loops"
+      },
+      "Input": {
+        "prefix": "input",
+        "body": ["input $${1:variable} \"${2:question}\""],
+        "description": "User input"
+      },
+      "Data Types": {
+        "prefix": "",
+        "body": ["- `string` - text"],
+        "description": "Data Types"
+      },
+      "Built-in Secret Functions": {
+        "prefix": "nöffnöff",
+        "body": ["- return the program name __not working yet__"],
+        "description": "Built-in secret functions"
+      },
+      "Operators": {
+        "prefix": "",
+        "body": [
+          "- `==` - equal to",
+          "- `!=` - not equal to",
+          "- `>` - greater than",
+          "- `<` - less than",
+          "- `>=` - greater than or equal to",
+          "- `<=` - less than or equal to"
+        ],
+        "description": "Operators"
+      },
+      "Keywords": {
+        "prefix": "",
+        "body": [
+          "- `nöff` - start of program",
+          "- `nöf` - create variable",
+          "- `oink` - print",
+          "- `niff` - if statement",
+          "- `nilf` - else if statement",
+          "- `snort` - start for loop",
+          "- `pork` - end for loop",
+          "- `pop` - break for loop",
+          "- `slingshot` - jump to line or function",
+          "- `pig` - create function",
+          "- `gip` - end function",
+          "- `input` - input"
+        ],
+        "description": "Keywords"
+      },
+      "Variable Modifiers": {
+        "prefix": "",
+        "body": [
+          "- `modify`",
+          "- `add`",
+          "- `sub` - subtract",
+          "- `multiply`",
+          "- `divide`",
+          "- `modulo`",
+          "- `power`"
+        ],
+        "description": "Variable Modifiers"
+      }
+    }
+  }
 }

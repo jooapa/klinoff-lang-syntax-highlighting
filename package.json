@@ -2,7 +2,7 @@
   "name": "klinoff-lang-syntax-highlighting",
   "displayName": "klinoff-lang Syntax Highlighting",
   "description": "Have you wanted to write klinoff-lang in peace and fast, well look no further, a groundbreaking technology of syntax highlighting from klinoff-lang",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "publisher": "Jooapa",
   "icon": "images/logo.png",
   "repository": {
@@ -12,7 +12,7 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": ["Programming Languages", "Snippets"],
   "contributes": {
     "languages": [
       {
@@ -39,11 +39,13 @@
         "path": "./syntaxes/klinoff-lang.tmLanguage.json"
       }
     ],
-    "snippets": [
-      {
-        "language": "kln",
-        "path": "./snippets/klinoff-lang-snippets.json"
+    "contributes": {
+        "snippets": [
+          {
+            "language": "kln",
+            "path": "./snippets/snippets.json"
+          }
+        ]
       }
-    ]
   }
 }
