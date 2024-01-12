@@ -55,7 +55,7 @@
       "patterns": [
         {
           "name": "keyword.control.kln",
-          "match": "\\b(nöff|nöf|oink|niff|nilf|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff|snort|pork|pop|infinite|rnd)\\b"
+          "match": "\\b(nöff|nöf|noff|nof|oink|niff|nilf|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff|snort|pork|pop|infinite|rnd)\\b"
         }
       ]
     },
@@ -175,7 +175,7 @@
       "patterns": [
         {
           "name": "keyword.control.kln",
-          "match": "\\b(==|!=|>|<|>=|<=|nöff|nöf|oink|niff|nilf|snort|pork|pop|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|infinite|input|nöffnöff|rnd)\\b",
+          "match": "\\b(==|!=|>|<|>=|<=|nöff|nöf|noff|nof|oink|niff|nilf|snort|pork|pop|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|infinite|input|nöffnöff|rnd)\\b",
           "captures": {
             "0": {
               "name": "keyword.control.kln"
