@@ -59,14 +59,6 @@
         }
       ]
     },
-    "variables": {
-      "patterns": [
-        {
-          "name": "variable.other.kln",
-          "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*(?<!§)"
-        }
-      ]
-    },
     "operators": {
       "patterns": [
         {
@@ -114,7 +106,10 @@
           "patterns": [
             {
               "name": "variable.interpolation.kln",
-              "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*§"
+              "match": "(\\$[a-zA-Z_][a-zA-Z0-9_]*)§"
+            },
+            {
+              "include": "#variables"
             }
           ],
           "captures": {
@@ -122,6 +117,14 @@
               "name": "string.quoted.double.kln"
             }
           }
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.kln",
+          "match": "\\b(?:num|\\$num)\\b"
         }
       ]
     },
@@ -169,7 +172,15 @@
       "patterns": [
         {
           "name": "keyword.control.kln",
-          "match": "\\b(==|!=|>|<|>=|<=|nöff|nöf|oink|niff|nilf|snort|pork|pop|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff)\\b"
+          "match": "\\b(==|!=|>|<|>=|<=|nöff|nöf|oink|niff|nilf|snort|pork|pop|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff)\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.control.kln"
+            },
+            "1": {
+              "include": "#strings"
+            }
+          }
         }
       ]
     }
