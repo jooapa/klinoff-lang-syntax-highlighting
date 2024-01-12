@@ -22,24 +22,6 @@
     },
     {
       "include": "#strings"
-    },
-    {
-      "include": "#control-flow"
-    },
-    {
-      "include": "#loops"
-    },
-    {
-      "include": "#input"
-    },
-    {
-      "include": "#data-types"
-    },
-    {
-      "include": "#secret-functions"
-    },
-    {
-      "include": "#all-keywords"
     }
   ],
   "repository": {
@@ -55,19 +37,27 @@
       "patterns": [
         {
           "name": "keyword.control.kln",
-          "match": "\\b(nöff|nöf|oink|niff|nilf|snort|pork|pop|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff)\\b"
+          "match": "\\b(nöff|nöf|oink|niff|nilf|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff|snort|pork|pop)\\b"
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "name": "variable.other.kln",
+          "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*(?<!§)"
         }
       ]
     },
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.comparison.kln",
-          "match": "==|!=|>|<|>=|<="
-        },
-        {
           "name": "keyword.operator.arithmetic.kln",
           "match": "[+\\-*/%^]"
+        },
+        {
+          "name": "keyword.operator.comparison.kln",
+          "match": "==|!=|>|<|>=|<="
         }
       ]
     },
@@ -75,17 +65,12 @@
       "patterns": [
         {
           "name": "entity.name.function.kln",
-          "match": "\\bpig\\b",
-          "begin": "\\bpossu\\b",
-          "end": "\\bgip\\b",
-          "patterns": [
-            {
-              "include": "#strings"
-            },
-            {
-              "include": "#comments"
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+          "captures": {
+            "0": {
+              "name": "entity.name.function.kln"
             }
-          ]
+          }
         }
       ]
     },
@@ -105,80 +90,23 @@
           "end": "\"",
           "patterns": [
             {
-              "name": "variable.interpolation.kln",
-              "match": "(\\$[a-zA-Z_][a-zA-Z0-9_]*)§"
+              "name": "variable.other.kln",
+              "match": "\\$[a-zA-Z_][a-zA-Z0-9_]*(?<!§)"
             },
             {
-              "include": "#variables"
+              "name": "string.quoted.double.kln.escape",
+              "match": "\\$"
             }
           ],
           "captures": {
             "0": {
               "name": "string.quoted.double.kln"
-            }
-          }
-        }
-      ]
-    },
-    "variables": {
-      "patterns": [
-        {
-          "name": "variable.other.kln",
-          "match": "\\b(?:num|\\$num)\\b"
-        }
-      ]
-    },
-    "control-flow": {
-      "patterns": [
-        {
-          "name": "keyword.control.kln",
-          "match": "\\b(niff|nilf)\\b"
-        }
-      ]
-    },
-    "loops": {
-      "patterns": [
-        {
-          "name": "keyword.control.kln",
-          "match": "\\b(snort|pork|pop)\\b"
-        }
-      ]
-    },
-    "input": {
-      "patterns": [
-        {
-          "name": "keyword.control.kln",
-          "match": "\\binput\\b"
-        }
-      ]
-    },
-    "data-types": {
-      "patterns": [
-        {
-          "name": "keyword.control.kln",
-          "match": "\\bstring\\b"
-        }
-      ]
-    },
-    "secret-functions": {
-      "patterns": [
-        {
-          "name": "keyword.control.kln",
-          "match": "\\bnöffnöff\\b"
-        }
-      ]
-    },
-    "all-keywords": {
-      "patterns": [
-        {
-          "name": "keyword.control.kln",
-          "match": "\\b(==|!=|>|<|>=|<=|nöff|nöf|oink|niff|nilf|snort|pork|pop|slingshot|pig|gip|modify|add|sub|multiply|divide|modulo|power|input|nöffnöff)\\b",
-          "captures": {
-            "0": {
-              "name": "keyword.control.kln"
             },
             "1": {
-              "include": "#strings"
+              "name": "variable.other.kln"
+            },
+            "2": {
+              "name": "string.quoted.double.kln.escape"
             }
           }
         }
